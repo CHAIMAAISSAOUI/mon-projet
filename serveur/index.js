@@ -1,5 +1,6 @@
 const experess = require ('express'); 
 const app = experess ();
+const cookieParser = require('cookie-parser')
 
 const cors= require("cors")
 const dotenv = require ('dotenv');
