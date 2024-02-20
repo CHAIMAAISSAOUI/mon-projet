@@ -22,3 +22,23 @@ export async function register (username, email, password) {
     return error
   }
 }
+
+
+
+export async function login ( email, password) {
+  try {
+    
+    const response = await axiosClient.post('/login', {
+    
+      email,
+      password
+    } ,{withCredentials: true});
+    console.log(response)
+    toast.success(response.data.massage)
+    return response
+  } catch (error) {
+    console.log(error,"here")
+    toast.error(error?.response?.data?.message)
+    return error
+  }
+}

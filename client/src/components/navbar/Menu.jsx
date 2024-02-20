@@ -8,12 +8,16 @@ function Menu() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">LOGO</Navbar.Brand>
+        <Navbar.Brand  ><Link className='btn' to="/">LOGO</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link ><Link to="/register">Register</Link></Nav.Link>
-            <Nav.Link ><Link to="/" >Home</Link></Nav.Link>
+           <Link className='btn' to="/register">Register</Link>
+           <Link className='btn' to="/" >Home</Link>
+
+           <Link className='btn' to="/login" >Login</Link>
+           <Link className='btn' to="/profile" >Profile</Link>
+
 
             {/* <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
